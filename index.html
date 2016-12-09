@@ -1,12 +1,38 @@
-<h1>kapho.github.io: kapho&#39;s tear collection flask</h1>
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>hello phaser!</title>
+        <script src="//cdn.jsdelivr.net/phaser/2.5.0/phaser.min.js"></script>
+    </head>
+    <body>
 
-<p>deets~<br/>
-name: kapho<br/>
-occupation: owl<br/>
-i make things sometimes.<br/></p>
+    <script type="text/javascript">
 
-<p>stuff i made! &#128169;<br/>
-<a href="https://github.com/Kapho/framework-garbage">Framework Garbage</a> - a respectably clean (but small) 2d boilerplate thing<br/>
-<a href="https://github.com/Kapho/Tomorrow-is-Unimportant">Tomorrow is Unimportant</a> - it's a mystery even to me.<br/></p>
+    window.onload = function() {
 
-<script src="test.js"></script>
+        //  Note that this html file is set to pull down Phaser 2.5.0 from the JS Delivr CDN.
+        //  Although it will work fine with this tutorial, it's almost certainly not the most current version.
+        //  Be sure to replace it with an updated version before you start experimenting with adding your own code.
+
+        var game = new Phaser.Game(800, 600, Phaser.CANVAS, '', { preload: preload, create: create });
+
+        function preload () {
+
+            game.load.image('logo', 'phaser.png');
+
+        }
+
+        function create () {
+
+            var logo = game.add.sprite(game.world.centerX, game.world.centerY, 'logo');
+            logo.anchor.setTo(0.5, 0.5);
+
+        }
+
+    };
+
+    </script>
+
+    </body>
+</html>
